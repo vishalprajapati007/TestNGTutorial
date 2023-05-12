@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="test.Listener"></listener>
+	</listeners>
+	<parameter name="URL" value="google.com"></parameter>
+    <test thread-count="5" name="Test">
+    <classes>
+      <class name="test.demo"/>
+      <class name="test.Day2">
+		  <methods>
+			  <include name="Apple"></include>
+		  </methods>
+      </class>
+    </classes>
+    
+    
+  </test> 
+  
+  <test name="Day">
+	  <classes>
+		  <class name="test.Day3">
+			  <methods>
+				  <exclude name="A2"></exclude>
+			  </methods>
+			  
+		  </class>
+		  
+	  </classes>
+	  
+  </test>
+  
+  
+</suite> 
